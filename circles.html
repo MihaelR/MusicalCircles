@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>Musical Circles </title>
+<head>
+    <meta charset="utf-8">
+<!-- Load the Paper.js library -->
+<script type="text/javascript" src="paper-full.js"></script>
+<link rel="stylesheet" type="text/css" href="circles.css">
+<!-- Define inlined PaperScript associate it with myCanvas -->
+<script type="text/paperscript" canvas="myCanvas">
+  
+function onKeyDown(event) {
+  var maxPoint= new Point(view.size.width, view.size.height);
+  var randomPoint= Point.random();
+  var point= maxPoint * randomPoint;
+
+     new Path.Circle(point, 10).fillColor="orange";
+   
+}
+</script>
+</head>
+
+<body>
+
+
+
+
+
+
+	<canvas id="myCanvas" resize></canvas>
+</body>
+</html>
